@@ -3,15 +3,12 @@ package com.ppetrov
 import org.apache.spark.sql._
 import org.apache.spark.sql.functions._
 
-import scala.collection.mutable
 
 /**
  *
  * Show case service  - join two tabllses
  */
 object ShowcaseService {
-
-  val miniFrame: mutable.Map[Any, (Dataset[Row], Dataset[Row])] = mutable.Map()
 
   def init(spark: SparkSession, year: Int, month: Int, week: Int): Unit = {
 
