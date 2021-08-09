@@ -11,8 +11,11 @@ object Main {
 
   def validateDate(args: Array[String]) = {
     try {
-//      (args(0).toInt, args(2).toInt, args(3).toInt)
-      (2017, 8, 1)
+      if(args(0).toInt == 0) {
+        throw new Exception("Please set even the year")
+      }
+
+      (args(0).toInt, args(2).toInt, args(3).toInt)
     } catch {
       case _: Exception => throw new Exception("No valid input params: should be 3 of them: year month week")
     }
